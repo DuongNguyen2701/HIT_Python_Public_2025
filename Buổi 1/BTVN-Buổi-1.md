@@ -32,12 +32,6 @@ Bài 2:
 - `dict`    : Từ điển (ví dụ: `{"ten": "An", "tuoi": 20}`)
 - `set`     : Tập hợp không trùng lặp (ví dụ: `{1, 2, 3}`)
 
-**Ví dụ:**
-```python
-x = 5
-print(type(x))  # <class 'int'>
-```
-
 ---
 
 ##  2. CÁC TOÁN TỬ TRONG PYTHON
