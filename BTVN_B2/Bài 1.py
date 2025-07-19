@@ -1,5 +1,7 @@
 # Nhập tháng và năm
 thang = int(input("Hãy nhập tháng: "))
+while (thang < 1) or (thang > 12):
+    thang = int(input("Hãy nhập tháng hợp lệ: "))
 nam = int(input("Hãy nhập năm: " ))
 
 # Xét năm nhuận
