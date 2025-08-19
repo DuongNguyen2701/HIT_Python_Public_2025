@@ -1,0 +1,34 @@
+def transpose_matrix(matrix):
+    n = len(matrix)        # số hàng
+    m = len(matrix[0])     # số cột
+    # Tạo ma trận chuyển vị (m x n)
+    transposed = [[0] * n for _ in range(m)]
+
+    for i in range(n):
+        for j in range(m):
+            transposed[j][i] = matrix[i][j]
+
+    return transposed
+
+
+# ---- Nhập dữ liệu ----
+n, m = map(int, input("Nhập số hàng và số cột (n m): ").split())
+
+matrix = []
+print("Nhập ma trận (mỗi hàng cách nhau bởi khoảng trắng):")
+for i in range(n):
+    row = list(map(int, input().split()))
+    matrix.append(row)
+
+# ---- In kết quả ----
+print("\nMa trận gốc:")
+for row in matrix:
+    print(*row)
+
+print("\nMa trận chuyển vị:")
+for row in transpose_matrix(matrix):
+    print(*row)
+
+print("\nSau khi chuyển vị, ma trận gốc vẫn giữ nguyên:")
+for row in matrix:
+    print(*row)

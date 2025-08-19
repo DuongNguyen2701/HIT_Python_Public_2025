@@ -1,0 +1,17 @@
+import re
+
+def format_phone_number(phone):
+    # Loại bỏ tất cả ký tự không phải số
+    digits = re.sub(r"\D", "", phone)
+
+    # Kiểm tra độ dài và bắt đầu bằng số 0
+    if len(digits) != 10 or not digits.startswith("0"):
+        return "Invalid phone number"
+
+    # Định dạng theo chuẩn quốc tế (+84)
+    return "+84 " + digits[1:]
+
+
+# ---- Chương trình chính ----
+phone_input = input("Nhập số điện thoại: ")
+print("Kết quả:", format_phone_number(phone_input))
